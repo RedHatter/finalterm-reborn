@@ -647,7 +647,7 @@ public class TerminalOutput : Gtk.TextBuffer {
 
 					if (iter.get_chars_in_line() > terminal.columns) {
 						iter.set_line_offset(terminal.columns);
-						get_iter_at_line_offset(out end, get_line_length(i))
+						get_iter_at_line_offset(out end, get_line_length(i));
 						this.delete(ref iter, ref end);
 					}
 				}
